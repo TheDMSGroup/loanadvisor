@@ -1,0 +1,72 @@
+/* line 2, ../sass/carousel.sass */
+.carousel-fade .carousel-inner .item {
+  -webkit-transition: opacity 2s linear;
+  -moz-transition: opacity 2s linear;
+  -ms-transition: opacity 2s linear;
+  -o-transition: opacity 2s linear;
+  transition: opacity 2s linear;
+  opacity: 0.5;
+}
+/* line 9, ../sass/carousel.sass */
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+/* line 11, ../sass/carousel.sass */
+.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* line 16, ../sass/carousel.sass */
+.carousel-inner {
+  height: 400px !important;
+}
+
+/* line 21, ../sass/carousel.sass */
+.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+/* line 23, ../sass/carousel.sass */
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/* line 26, ../sass/carousel.sass */
+html, body, .carousel, .carousel-inner .item {
+  height: 100%;
+}
+
+/* line 29, ../sass/carousel.sass */
+.item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* line 33, ../sass/carousel.sass */
+.item:nth-child(1) {
+  background-image: url(../images/slideshow/apartment-1.jpg);
+}
+/* line 35, ../sass/carousel.sass */
+.item:nth-child(2) {
+  background-image: url(../images/slideshow/apartment-2.jpg);
+}
+/* line 37, ../sass/carousel.sass */
+.item:nth-child(3) {
+  background-image: url(../images/slideshow/apartment-3.jpg);
+}
+/* line 39, ../sass/carousel.sass */
+.item:nth-child(4) {
+  background-image: url(../images/slideshow/apartment-4.jpg);
+}
+
+/* line 42, ../sass/carousel.sass */
+.carousel-overlay {
+  position: absolute;
+  bottom: 150px;
+  right: 0;
+  left: 0;
+  /*text styles below just for demo */
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}

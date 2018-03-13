@@ -1,0 +1,335 @@
+@import compass/css3
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600')
+
+$black: #000
+$gray: #9ea3a4
+$green: #96d703
+$blue: #157bd1
+
+$primary: $blue !default
+$primary-md: darken($primary, 10%) !default
+$secondary: $green
+$secondary-md: darken($secondary, 10%) !default
+
+// -------------------------- COMMON --------------------------------------------------
+
+// extendables
+.uppercase
+  text-transform: uppercase
+  letter-spacing: 1px
+
+// common
+body
+  font-family: "Montserrat", Helvetica, Arial, sans-serif
+  background: #f1f1f2
+  color: #444
+  font-size: 16px
+
+p, ul, li
+  color: #666
+  line-height: 1.6em
+  font-weight: 300
+
+img
+  max-width: 100%
+
+a
+  color: $primary
+  cursor: pointer
+  &:hover
+    color: $primary-md
+    text-decoration: none
+
+h1
+  color: $primary
+  font-size: 36px
+  font-weight: 300
+  margin: 0 0 40px
+
+select:-moz-focusring
+  outline: none
+  color: transparent
+  text-shadow: 0 0 0 #000
+
+.container
+  width: 100%
+  max-width: 100%
+  padding: 0
+
+.row-inset
+  max-width: 1200px
+  margin: auto
+  padding: 0 15px
+
+.form-cta
+  position: relative
+  height: 40px
+// arrow
+.arrow:after, .arrow:before
+  top: 100%
+  left: 50%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+
+.arrow:after
+  border-top-color: #ffffff
+  border-width: 8px
+  margin-left: -8px
+
+.arrow:before
+  border-top-color: #666
+  border-width: 12px
+  margin-left: -12px
+
+.arrow
+  display: block
+  position: absolute !important
+  top: 15px
+  left: 50%
+  z-index: 2
+  animation: float 1.5s ease-in-out infinite
+.animated
+  animation-duration: 2s
+  animation-fill-mode: both
+  animation-timing-function: ease-in-out
+  animation-iteration-count: infinite
+@keyframes bounce
+  0%, 100%
+    transform: translateY(0)
+  50%
+    transform: translateY(-5px)
+.bounce
+  animation-name: bounce
+
+.header
+  background: white
+  padding-top: 15px
+  padding-bottom: 15px
+  text-align: center
+  overflow: hidden
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2)
+  .header-brand a
+    background-image: url('../images/loan-advisor-logo.png')
+    background-repeat: no-repeat
+    display: block
+    float: left
+    margin: auto
+    width: 300px
+    height: 42px
+    text-indent: -9999px
+    margin-right: 10px
+    background-size: contain
+    margin-top: 10px
+  .pull-right
+    span
+      color: $primary
+      display: inline-block
+      margin-right: 10px
+      position: relative
+      top: 0px
+
+.loan-info
+  padding-right: 80px
+  border-right: 1px solid #ddd
+  h1, p, li
+    color: #999
+  h1
+    font-size: 24px
+    margin: 20px 0
+  ul
+    list-style: none
+    padding: 0
+  li
+    margin-bottom: 20px
+    font-size: 14px
+    clear: both
+  .loan-icon
+    width: 38px
+    float: left
+    margin: 5px 15px 20px 0
+
+// form
+.form-container
+  background: white
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.15)
+  border-radius: 5px
+  margin-top: 50px
+  .form-body
+    padding: 50px 20px
+    margin: auto
+    max-width: 1000px
+
+.form
+  text-align: center
+  padding-left: 50px
+  .sub-label
+    color: $secondary
+    font-weight: normal
+  > .form-group
+    width: 90%
+    margin: auto
+    max-width: 320px
+
+.form .ll
+  padding-bottom: 30px
+  a
+    color: $primary
+    cursor: pointer
+    &:hover
+      color: $primary-md
+      text-decoration: none
+  h2
+    font-weight: 300 !important
+    color: #666
+    font-size: 24px
+    span
+      color: $primary
+  .list-inline
+    display: none
+  // center select
+  .has-feedback .form-control
+    padding-left: 42.5px
+    padding-top: 5px
+  .formio-placeholder
+    position: relative
+    top: 5px
+  .choices__list--single
+    padding-top: 3px
+  .form-control
+    height: 44px
+    font-size: 18px !important
+    font-weight: 300 !important
+    text-align: center
+    select, input[type="text"], input[type="tel"], input[type="email"]
+      border: 1px solid #ccc
+      border-radius: 0
+      padding: 5px 10px
+      box-sizing: border-box
+      font-family: "Montserrat", Helvetica, Arial, sans-serif
+      width: 100%
+      margin: 10px 0
+      text-align: center
+      font-size: 18px !important
+      font-weight: 300 !important
+
+  label.control-label
+    display: none
+
+  select:-moz-focusring
+    outline: none
+    color: transparent
+    text-shadow: 0 0 0 #000
+
+  .progress
+    display: none
+    height: 8px
+    border-radius: 0
+    background: none
+    .progress-bar
+      border-radius: 0
+      background: $secondary
+
+  .btn, .btn-primary
+    font-weight: 300
+    letter-spacing: 1px
+    color: white
+    font-size: 21px !important
+    padding: 12px 30px !important
+    background: $primary !important
+    border: none !important
+    border-radius: 5px
+    white-space: normal
+    cursor: pointer
+    text-shadow: rgba(0,0,0,0.2) 0 -1px 0
+    margin: 10px 0
+    width: 100%
+    &:hover
+      color: white
+      background: $primary-md !important
+      text-shadow: rgba(0,0,0,0.6) 0 -1px 0
+      top: 1px
+      position: relative
+
+  .disclaimer
+    font-size: 12px
+    line-height: 20px
+
+  label
+    font-size: 12px
+    color: #999
+    display: block
+    font-weight: 300
+
+// pagination to dots
+.form .ll .pagination
+  text-align: center
+  margin: auto
+  display: block
+  position: absolute
+  bottom: 0
+  width: 100%
+  margin-top: 30px
+  >
+    li>a, li>span
+      background: #e6e7e8
+      text-indent: -9999px
+      height: 10px
+      width: 10px
+      margin-right: 10px
+      border-radius: 5px !important
+      padding: 0
+      border: none
+      float: none
+      display: inline-block
+    li.active>a, li.active>span
+      background: $secondary
+
+.form-note
+  font-weight: 300
+  font-size: 14px
+
+.footer
+  clear: both
+  overflow: auto
+  padding: 30px 0
+  p
+    color: #999
+    font-size: 13px
+
+
+//////////////////////////////////////  MEDIA QUERIES  ///////////////////////////////////////
+
+@media (max-width: 768px)
+  .header
+    .header-brand a
+      max-width: 320px
+      margin: auto
+      float: none
+      background-size: contain
+    p
+      float: none
+      margin: auto
+    .pull-right
+      float: none !important
+  .row-inset
+    padding: 0 20px
+  .form-container
+    margin: 0 -20px
+    border-radius: 0
+
+@media (max-width: 480px)
+  .form-container .form-body
+    padding: 20px
+  .ola
+    display: none
+  .form
+    padding: 0
+  .loan-info
+    border: none
+    border-top: 1px solid #ddd
+    padding: 40px 0 0
+    margin-top: 40px
