@@ -351,8 +351,12 @@ select:-moz-focusring {
   display: block;
   font-weight: 300;
 }
+/* line 271, ../sass/form.sass */
+.form .ll .loan-icon {
+  width: 130px;
+}
 
-/* line 272, ../sass/form.sass */
+/* line 275, ../sass/form.sass */
 .form .ll .pagination {
   text-align: center;
   margin: auto;
@@ -362,7 +366,7 @@ select:-moz-focusring {
   width: 100%;
   margin-top: 30px;
 }
-/* line 281, ../sass/form.sass */
+/* line 284, ../sass/form.sass */
 .form .ll .pagination > li > a, .form .ll .pagination > li > span {
   background: #e6e7e8;
   text-indent: -9999px;
@@ -375,38 +379,38 @@ select:-moz-focusring {
   float: none;
   display: inline-block;
 }
-/* line 292, ../sass/form.sass */
+/* line 295, ../sass/form.sass */
 .form .ll .pagination > li.active > a, .form .ll .pagination > li.active > span {
   background: #96d703;
 }
 
-/* line 295, ../sass/form.sass */
+/* line 298, ../sass/form.sass */
 .form-note {
   font-weight: 300;
   font-size: 14px;
 }
 
-/* line 299, ../sass/form.sass */
+/* line 302, ../sass/form.sass */
 .footer {
   clear: both;
   overflow: auto;
   padding: 30px 0;
 }
-/* line 303, ../sass/form.sass */
+/* line 306, ../sass/form.sass */
 .footer p {
   color: #999;
   font-size: 13px;
 }
 
-/* line 308, ../sass/form.sass */
+/* line 311, ../sass/form.sass */
 #thanks h1, #thanks h2 {
   font-weight: 300;
 }
-/* line 310, ../sass/form.sass */
+/* line 313, ../sass/form.sass */
 #thanks h1 {
   font-size: 46px;
 }
-/* line 312, ../sass/form.sass */
+/* line 315, ../sass/form.sass */
 #thanks .blue-container {
   background-color: #157bd1;
   padding: 10%;
@@ -415,71 +419,71 @@ select:-moz-focusring {
   margin-top: 50px;
   min-height: 492px;
 }
-/* line 319, ../sass/form.sass */
+/* line 322, ../sass/form.sass */
 #thanks .blue-container h1, #thanks .blue-container p {
   color: white;
 }
-/* line 321, ../sass/form.sass */
+/* line 324, ../sass/form.sass */
 #thanks .form-container {
   padding: 10%;
   text-align: center;
 }
-/* line 324, ../sass/form.sass */
+/* line 327, ../sass/form.sass */
 #thanks .form-container .ll {
   padding-bottom: 0px;
 }
-/* line 326, ../sass/form.sass */
+/* line 329, ../sass/form.sass */
 #thanks .form-container .credit-score {
   display: block;
   margin: 20px auto;
 }
 
 @media (max-width: 768px) {
-  /* line 335, ../sass/form.sass */
+  /* line 338, ../sass/form.sass */
   .header .header-brand a {
     max-width: 320px;
     margin: auto;
     float: none;
     background-size: contain;
   }
-  /* line 340, ../sass/form.sass */
+  /* line 343, ../sass/form.sass */
   .header p {
     float: none;
     margin: auto;
   }
-  /* line 343, ../sass/form.sass */
+  /* line 346, ../sass/form.sass */
   .header .pull-right {
     float: none !important;
   }
 
-  /* line 345, ../sass/form.sass */
+  /* line 348, ../sass/form.sass */
   .row-inset {
     padding: 0 20px;
   }
 
-  /* line 347, ../sass/form.sass */
+  /* line 350, ../sass/form.sass */
   .form-container {
     margin: 0 -20px;
     border-radius: 0;
   }
 }
 @media (max-width: 480px) {
-  /* line 352, ../sass/form.sass */
+  /* line 355, ../sass/form.sass */
   .form-container .form-body {
     padding: 20px;
   }
 
-  /* line 354, ../sass/form.sass */
+  /* line 357, ../sass/form.sass */
   .ola {
     display: none;
   }
 
-  /* line 356, ../sass/form.sass */
+  /* line 359, ../sass/form.sass */
   .form {
     padding: 0;
   }
 
-  /* line 358, ../sass/form.sass */
+  /* line 361, ../sass/form.sass */
   .loan-info {
     border: none;
     border-top: 1px solid #ddd;
@@ -487,12 +491,12 @@ select:-moz-focusring {
     margin-top: 40px;
   }
 
-  /* line 364, ../sass/form.sass */
+  /* line 367, ../sass/form.sass */
   #thanks .blue-container {
     margin: 20px 0;
     min-height: auto;
   }
-  /* line 367, ../sass/form.sass */
+  /* line 370, ../sass/form.sass */
   #thanks h1 {
     font-size: 36px;
   }
