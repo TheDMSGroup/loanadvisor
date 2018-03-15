@@ -442,3 +442,7 @@ select:-moz-focusring {
     font-size: 28px;
   }
 }
+/* Tempporary */
+.ola {
+  visibility: hidden
+}
