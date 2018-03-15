@@ -61,49 +61,56 @@ select:-moz-focusring
   margin: auto
   padding: 0 15px
 
+.popover
+  max-width: 100%
+  .popover-content
+    font-size: 13px
+    font-weight: 300
+
 .form-cta
   position: relative
   height: 40px
-// arrow
-.arrow:after, .arrow:before
-  top: 100%
-  left: 50%
-  border: solid transparent
-  content: " "
-  height: 0
-  width: 0
-  position: absolute
-  pointer-events: none
 
-.arrow:after
-  border-top-color: #ffffff
-  border-width: 8px
-  margin-left: -8px
+  // arrow
+  .arrow:after, .arrow:before
+    top: 100%
+    left: 50%
+    border: solid transparent
+    content: " "
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
 
-.arrow:before
-  border-top-color: #666
-  border-width: 12px
-  margin-left: -12px
+  .arrow:after
+    border-top-color: #ffffff
+    border-width: 8px
+    margin-left: -8px
 
-.arrow
-  display: block
-  position: absolute !important
-  top: 15px
-  left: 50%
-  z-index: 2
-  animation: float 1.5s ease-in-out infinite
-.animated
-  animation-duration: 2s
-  animation-fill-mode: both
-  animation-timing-function: ease-in-out
-  animation-iteration-count: infinite
-@keyframes bounce
-  0%, 100%
-    transform: translateY(0)
-  50%
-    transform: translateY(-5px)
-.bounce
-  animation-name: bounce
+  .arrow:before
+    border-top-color: #666
+    border-width: 12px
+    margin-left: -12px
+
+  .arrow
+    display: block
+    position: absolute !important
+    top: 15px
+    left: 50%
+    z-index: 2
+    animation: float 1.5s ease-in-out infinite
+  .animated
+    animation-duration: 2s
+    animation-fill-mode: both
+    animation-timing-function: ease-in-out
+    animation-iteration-count: infinite
+  @keyframes bounce
+    0%, 100%
+      transform: translateY(0)
+    50%
+      transform: translateY(-5px)
+  .bounce
+    animation-name: bounce
 
 .header
   background: white
@@ -295,9 +302,22 @@ select:-moz-focusring
     li.active>a, li.active>span
       background: $secondary
 
+.form .ll
+  .secure
+    font-weight: 300
+    font-size: 13px
+    padding-left: 30px
+    text-align: left
+    background: url('../images/icn-secure.png') no-repeat left center
+    background-size: 21px
+    margin-bottom: 10px
+  .question
+    font-size: 16px
+    position: relative
+    bottom: 2px
 .form-note
   font-weight: 300
-  font-size: 14px
+  font-size: 13px
 
 .footer
   clear: both
