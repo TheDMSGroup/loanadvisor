@@ -522,3 +522,7 @@ select:-moz-focusring {
     font-size: 36px;
   }
 }
+/* Temporary hide the image until we get approval */ 
+.ola {
+    visibility: hidden
+}
