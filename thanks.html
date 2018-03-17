@@ -64,12 +64,21 @@
             <div class="col-md-6">
               <div class="form form-container">
                 <div class="ll">
-                  <h2>The next step is to get your most recent credit scores now.</h2>
-                  <img src="images/credit-score-scale.png" class="credit-score" alt="Credit score scale">
-                  <a href="https://brrpost.com/?a=2&oc=174&c=483&p=c&m=11&source_id=undefined&firstname=undefined&lastname=undefined&email=undefined&address1=undefined&city=undefined&state=undefined&zipcode=undefined&phone1=undefined" class="btn btn-green">Get a Free Credit Score</a>
-                  <p class="form-note">Using this service will NOT affect your credit score</p>
-                  <br>
-                  <p><a href="credit.html">I already know my credit score</a>.</p>
+                    <fieldset class="form-group" style="visibility: visible; position: relative;">
+                    <h2 class="" style="visibility: visible; position: relative;">What is your social security number?
+                      <a class="question" tabindex="0" role="button" data-placement="top" data-trigger="focus" data-toggle="popover" title="Why is this needed?"
+                        data-html="true" data-content="Lenders need your Social Security number to run a soft credit check to see your credit score. <strong>This will not affect your credit score</strong>. <br><br>Because your credit score reflects your reliability and the likelihood that you’ll pay off your debts, it is vital for lenders to see this number and your credit report.">
+                      </a>
+                    </h2>
+                    <div class="secure" style="visibility: visible; position: relative;">We do a soft pull which does not affect your credit score. We&nbsp;use 128-bit SSL technology to encrypt your data.</div>
+                    <div class="form-group has-feedback formio-component formio-component-textfield"
+                      style="visibility: visible; position: relative;">
+                      <label class="control-label">Social Security Number</label>
+                      <input id="ssn" type="text" class="form-control" placeholder="Social Security Number">
+                      </div>
+                      <button id="ssn-submit" type="submit" class="btn btn-primary" style="visibility: visible; position: relative;">Submit</button>
+                      <label class="tcpa" style="visibility: visible; position: relative;">
+                        <input type="hidden" id="leadid_tcpa_disclosure"> We take your privacy seriously.By clicking "Submit", you agree to share your information with up to 4 participating lenders which may include the following <a href="/full-lender-list" target="_blank">lenders</a> and <a href="/partner-list" target="_blank">partners</a> regarding financial services and credit related offers and for them to contact you (including through automated means; e.g. autodialing, text and pre-recorded messaging) via telephone, mobile device (including SMS and MMS) and/or email, even if you are charged for the call or your telephone number is currently listed on any state, federal or corporate Do Not Call list. You agree that this consent is not a condition of purchase. That this is not a loan application and you are under no obligations.</label></fieldset>
                 </div>
               </div><!-- end form-container -->
             </div>
@@ -100,5 +109,74 @@
     <script src="js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+      var completedFields = JSON.parse(sessionStorage.getItem('crm.session_completed_fields'));
+        var currentPage = 0;
+        var totalPages = completedFields ? completedFields.total_pages : 0;
+        var fields = [
+          {outputName: 'LoanPurpose', inputName: 'use_of_loan'},
+          {outputName: 'CashOut', inputName: 'amount_of_loan'},
+          {outputName: 'CreditRating', inputName: 'credit_score'},
+          {outputName: 'EmploymentStatus', inputName: 'employed'},
+          {outputName: 'MonthlyPayment', inputName: 'household_income'},
+          {outputName: 'OwnHome', inputName: 'homeowner_rent_own'},
+          {outputName: 'TimeAtResidence', inputName: 'address_lengthoftime'},
+          {outputName: 'Fname', inputName: 'first_name'},
+          {outputName: 'Lname', inputName: 'last_name'},
+          {outputName: 'Email', inputName: 'email'},
+          {outputName: 'Street', inputName: 'address'},
+          {outputName: 'HomePhone', inputName: 'phone_cell'}
+        ];
+
+        function getQueryParam (e) {
+            if (e = new RegExp('[?&]' + encodeURIComponent(e) + '=([^&]*)').exec(location.search)) {
+                return decodeURIComponent(e[1])
+            }
+        }
+        payload = {};
+        for (var index in fields) {
+          currentInputData = fields[index];
+          currentQueryParamKey = currentInputData['outputName'];
+          currentQueryParamVal = getQueryParam(currentInputData.inputName);
+          payload[currentQueryParamKey] = currentQueryParamVal;
+          
+        }
+        if (completedFields.hasOwnProperty('data')) {
+            for (var index in completedFields.data) {
+            currentField = completedFields.data[index];
+            tmpObj = getObjectByProperty(fields, 'inputName', currentField.key);		
+            if (typeof tmpObj !== 'undefined' && tmpObj !== null) {
+                    payload[tmpObj['outputName']] = currentField.value;
+                }
+            currentPage = currentField.page;
+            }
+        }
+        function getObjectByProperty (dataArray, propertyName, expectedValue) {
+            for (var i=0; i<dataArray.length; i++) {
+                if (dataArray[i][propertyName] === expectedValue) {
+                    return dataArray[i];
+                }
+            }
+        }
+
+        // if button has been clicked to submit SSN, we will post to quinstreet
+        var button = document.getElementById('ssn-submit');
+        button.onclick = function() {
+          // push ssn field into the payload
+          payload.SSN = document.getElementById('ssn').value
+          var http = new XMLHttpRequest();
+          // staging URL 
+          var url = 'http://guidetolenders.quinstage.com/plpost.jsp';
+          // prod URL
+          // var url = 'https://securegtl.quinstreet.com/plpost.jsp';
+
+          http.open('POST', url);
+          http.setRequestHeader('Content-type', 'application/json');
+          http.setRequestHeader('True-Client-IP', '72.186.114.229')
+          // this probably needs to be changed
+          http.setRequestHeader('Authorization', "Basic ZHJlZGR5:QnJzbm5yczY4Iw== Token MjAzMDY2MTA=")
+          http.send(JSON.stringify(payload))
+        }
+    </script>
   </body>
 </html>
