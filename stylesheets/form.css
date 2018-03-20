@@ -135,11 +135,11 @@ select:-moz-focusring {
 /* line 115, ../sass/form.sass */
 .header {
   background: white;
+  color: white;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 /* line 122, ../sass/form.sass */
 .header .header-brand a {
@@ -151,132 +151,140 @@ select:-moz-focusring {
   width: 300px;
   height: 42px;
   text-indent: -9999px;
-  margin-right: 10px;
+  margin: 10px 10px 10px 0;
   background-size: contain;
-  margin-top: 10px;
+}
+/* line 133, ../sass/form.sass */
+.header .pull-right {
+  text-align: right;
 }
 /* line 135, ../sass/form.sass */
 .header .pull-right span {
-  color: #157bd1;
+  color: #666;
   display: inline-block;
-  margin-right: 10px;
-  position: relative;
-  top: 0px;
+  margin-top: 10px;
+}
+/* line 139, ../sass/form.sass */
+.header .pull-right a {
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* line 142, ../sass/form.sass */
+/* line 145, ../sass/form.sass */
 .loan-info {
   padding-right: 80px;
   border-right: 1px solid #ddd;
 }
-/* line 145, ../sass/form.sass */
+/* line 148, ../sass/form.sass */
 .loan-info h1, .loan-info p, .loan-info li {
   color: #999;
 }
-/* line 147, ../sass/form.sass */
+/* line 150, ../sass/form.sass */
 .loan-info h1 {
   font-size: 24px;
   margin: 20px 0;
 }
-/* line 150, ../sass/form.sass */
+/* line 153, ../sass/form.sass */
 .loan-info ul {
   list-style: none;
   padding: 0;
 }
-/* line 153, ../sass/form.sass */
+/* line 156, ../sass/form.sass */
 .loan-info li {
   margin-bottom: 20px;
   font-size: 14px;
   clear: both;
 }
-/* line 157, ../sass/form.sass */
+/* line 160, ../sass/form.sass */
 .loan-info .loan-icon {
   width: 38px;
   float: left;
   margin: 5px 15px 20px 0;
 }
 
-/* line 163, ../sass/form.sass */
+/* line 166, ../sass/form.sass */
 .form-container {
   background: white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   margin-top: 50px;
 }
-/* line 168, ../sass/form.sass */
+/* line 171, ../sass/form.sass */
 .form-container .form-body {
   padding: 50px 20px;
   margin: auto;
   max-width: 1000px;
 }
 
-/* line 173, ../sass/form.sass */
+/* line 176, ../sass/form.sass */
 .form {
   text-align: center;
   padding-left: 50px;
 }
-/* line 176, ../sass/form.sass */
+/* line 179, ../sass/form.sass */
 .form .sub-label {
   color: #96d703;
   font-weight: normal;
 }
-/* line 179, ../sass/form.sass */
+/* line 182, ../sass/form.sass */
 .form > .form-group {
   width: 90%;
   margin: auto;
   max-width: 320px;
 }
 
-/* line 184, ../sass/form.sass */
+/* line 187, ../sass/form.sass */
 .form .ll {
   padding-bottom: 30px;
 }
-/* line 186, ../sass/form.sass */
+/* line 189, ../sass/form.sass */
 .form .ll a {
   color: #157bd1;
   cursor: pointer;
 }
-/* line 189, ../sass/form.sass */
+/* line 192, ../sass/form.sass */
 .form .ll a:hover {
   color: #1060a3;
   text-decoration: none;
 }
-/* line 192, ../sass/form.sass */
+/* line 195, ../sass/form.sass */
 .form .ll h2 {
   font-weight: 300 !important;
   color: #666;
   font-size: 24px;
 }
-/* line 196, ../sass/form.sass */
+/* line 199, ../sass/form.sass */
 .form .ll h2 span {
   color: #157bd1;
 }
-/* line 198, ../sass/form.sass */
+/* line 201, ../sass/form.sass */
 .form .ll .list-inline {
   display: none;
 }
-/* line 201, ../sass/form.sass */
+/* line 204, ../sass/form.sass */
 .form .ll .has-feedback .form-control {
   padding-left: 42.5px;
   padding-top: 5px;
 }
-/* line 204, ../sass/form.sass */
+/* line 207, ../sass/form.sass */
 .form .ll .formio-placeholder {
   position: relative;
   top: 5px;
 }
-/* line 207, ../sass/form.sass */
+/* line 210, ../sass/form.sass */
 .form .ll .choices__list--single {
   padding-top: 3px;
 }
-/* line 209, ../sass/form.sass */
+/* line 212, ../sass/form.sass */
 .form .ll .form-control {
   height: 44px;
   font-size: 18px !important;
   font-weight: 300 !important;
   text-align: center;
 }
-/* line 214, ../sass/form.sass */
+/* line 217, ../sass/form.sass */
 .form .ll .form-control select, .form .ll .form-control input[type="text"], .form .ll .form-control input[type="tel"], .form .ll .form-control input[type="email"] {
   border: 1px solid #ccc;
   border-radius: 0;
@@ -289,29 +297,29 @@ select:-moz-focusring {
   font-size: 18px !important;
   font-weight: 300 !important;
 }
-/* line 226, ../sass/form.sass */
+/* line 229, ../sass/form.sass */
 .form .ll label.control-label {
   display: none;
 }
-/* line 229, ../sass/form.sass */
+/* line 232, ../sass/form.sass */
 .form .ll select:-moz-focusring {
   outline: none;
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
-/* line 234, ../sass/form.sass */
+/* line 237, ../sass/form.sass */
 .form .ll .progress {
   display: none;
   height: 8px;
   border-radius: 0;
   background: none;
 }
-/* line 239, ../sass/form.sass */
+/* line 242, ../sass/form.sass */
 .form .ll .progress .progress-bar {
   border-radius: 0;
   background: #96d703;
 }
-/* line 243, ../sass/form.sass */
+/* line 246, ../sass/form.sass */
 .form .ll .btn, .form .ll .btn-primary {
   font-weight: 300;
   letter-spacing: 1px;
@@ -327,7 +335,7 @@ select:-moz-focusring {
   margin: 10px 0;
   width: 100%;
 }
-/* line 257, ../sass/form.sass */
+/* line 260, ../sass/form.sass */
 .form .ll .btn:hover, .form .ll .btn-primary:hover {
   color: white;
   background: #1060a3 !important;
@@ -335,32 +343,32 @@ select:-moz-focusring {
   top: 1px;
   position: relative;
 }
-/* line 263, ../sass/form.sass */
+/* line 266, ../sass/form.sass */
 .form .ll .btn.btn-green, .form .ll .btn-primary.btn-green {
   background: #96d703 !important;
 }
-/* line 265, ../sass/form.sass */
+/* line 268, ../sass/form.sass */
 .form .ll .btn.btn-green:hover, .form .ll .btn-primary.btn-green:hover {
   background: #84be03 !important;
 }
-/* line 268, ../sass/form.sass */
+/* line 271, ../sass/form.sass */
 .form .ll .disclaimer {
   font-size: 12px;
   line-height: 20px;
 }
-/* line 272, ../sass/form.sass */
+/* line 275, ../sass/form.sass */
 .form .ll label {
   font-size: 12px;
   color: #999;
   display: block;
   font-weight: 300;
 }
-/* line 278, ../sass/form.sass */
+/* line 281, ../sass/form.sass */
 .form .ll .loan-icon {
   width: 130px;
 }
 
-/* line 282, ../sass/form.sass */
+/* line 285, ../sass/form.sass */
 .form .ll .pagination {
   text-align: center;
   margin: auto;
@@ -370,7 +378,7 @@ select:-moz-focusring {
   width: 100%;
   margin-top: 30px;
 }
-/* line 291, ../sass/form.sass */
+/* line 294, ../sass/form.sass */
 .form .ll .pagination > li > a, .form .ll .pagination > li > span {
   background: #e6e7e8;
   text-indent: -9999px;
@@ -383,12 +391,12 @@ select:-moz-focusring {
   float: none;
   display: inline-block;
 }
-/* line 302, ../sass/form.sass */
+/* line 305, ../sass/form.sass */
 .form .ll .pagination > li.active > a, .form .ll .pagination > li.active > span {
   background: #96d703;
 }
 
-/* line 306, ../sass/form.sass */
+/* line 309, ../sass/form.sass */
 .form .ll .secure {
   font-weight: 300;
   font-size: 13px;
@@ -398,40 +406,40 @@ select:-moz-focusring {
   background-size: 21px;
   margin-bottom: 10px;
 }
-/* line 314, ../sass/form.sass */
+/* line 317, ../sass/form.sass */
 .form .ll .question {
   font-size: 16px;
   position: relative;
   bottom: 2px;
 }
 
-/* line 318, ../sass/form.sass */
+/* line 321, ../sass/form.sass */
 .form-note {
   font-weight: 300;
   font-size: 13px;
 }
 
-/* line 322, ../sass/form.sass */
+/* line 325, ../sass/form.sass */
 .footer {
   clear: both;
   overflow: auto;
   padding: 30px 0;
 }
-/* line 326, ../sass/form.sass */
+/* line 329, ../sass/form.sass */
 .footer p {
   color: #999;
   font-size: 13px;
 }
 
-/* line 331, ../sass/form.sass */
+/* line 334, ../sass/form.sass */
 #thanks h1, #thanks h2 {
   font-weight: 300;
 }
-/* line 333, ../sass/form.sass */
+/* line 336, ../sass/form.sass */
 #thanks h1 {
   font-size: 46px;
 }
-/* line 335, ../sass/form.sass */
+/* line 338, ../sass/form.sass */
 #thanks .blue-container {
   background-color: #157bd1;
   padding: 10%;
@@ -440,71 +448,71 @@ select:-moz-focusring {
   margin-top: 50px;
   min-height: 492px;
 }
-/* line 342, ../sass/form.sass */
+/* line 345, ../sass/form.sass */
 #thanks .blue-container h1, #thanks .blue-container p {
   color: white;
 }
-/* line 344, ../sass/form.sass */
+/* line 347, ../sass/form.sass */
 #thanks .form-container {
   padding: 10%;
   text-align: center;
 }
-/* line 347, ../sass/form.sass */
+/* line 350, ../sass/form.sass */
 #thanks .form-container .ll {
   padding-bottom: 0px;
 }
-/* line 349, ../sass/form.sass */
+/* line 352, ../sass/form.sass */
 #thanks .form-container .credit-score {
   display: block;
   margin: 20px auto;
 }
 
 @media (max-width: 768px) {
-  /* line 358, ../sass/form.sass */
+  /* line 361, ../sass/form.sass */
   .header .header-brand a {
     max-width: 320px;
     margin: auto;
     float: none;
     background-size: contain;
   }
-  /* line 363, ../sass/form.sass */
+  /* line 366, ../sass/form.sass */
   .header p {
     float: none;
     margin: auto;
   }
-  /* line 366, ../sass/form.sass */
+  /* line 369, ../sass/form.sass */
   .header .pull-right {
     float: none !important;
   }
 
-  /* line 368, ../sass/form.sass */
+  /* line 371, ../sass/form.sass */
   .row-inset {
     padding: 0 20px;
   }
 
-  /* line 370, ../sass/form.sass */
+  /* line 373, ../sass/form.sass */
   .form-container {
     margin: 0 -20px;
     border-radius: 0;
   }
 }
 @media (max-width: 480px) {
-  /* line 375, ../sass/form.sass */
+  /* line 378, ../sass/form.sass */
   .form-container .form-body {
     padding: 20px;
   }
 
-  /* line 377, ../sass/form.sass */
+  /* line 380, ../sass/form.sass */
   .ola {
     display: none;
   }
 
-  /* line 379, ../sass/form.sass */
+  /* line 382, ../sass/form.sass */
   .form {
     padding: 0;
   }
 
-  /* line 381, ../sass/form.sass */
+  /* line 384, ../sass/form.sass */
   .loan-info {
     border: none;
     border-top: 1px solid #ddd;
@@ -512,17 +520,13 @@ select:-moz-focusring {
     margin-top: 40px;
   }
 
-  /* line 387, ../sass/form.sass */
+  /* line 390, ../sass/form.sass */
   #thanks .blue-container {
     margin: 20px 0;
     min-height: auto;
   }
-  /* line 390, ../sass/form.sass */
+  /* line 393, ../sass/form.sass */
   #thanks h1 {
     font-size: 36px;
   }
-}
-/* Temporary hide the image until we get approval */ 
-.ola {
-    visibility: hidden
 }

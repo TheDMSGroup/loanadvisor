@@ -114,11 +114,11 @@ select:-moz-focusring
 
 .header
   background: white
+  color: white
   padding-top: 15px
   padding-bottom: 15px
   text-align: center
   overflow: hidden
-  box-shadow: 0 1px 5px rgba(0,0,0,0.2)
   .header-brand a
     background-image: url('../images/loan-advisor-logo.png')
     background-repeat: no-repeat
@@ -128,16 +128,19 @@ select:-moz-focusring
     width: 300px
     height: 42px
     text-indent: -9999px
-    margin-right: 10px
+    margin: 10px 10px 10px 0
     background-size: contain
-    margin-top: 10px
   .pull-right
+    text-align: right
     span
-      color: $primary
+      color: #666
       display: inline-block
-      margin-right: 10px
-      position: relative
-      top: 0px
+      margin-top: 10px
+    a
+      font-weight: 300
+      font-size: 12px
+      text-transform: uppercase
+      letter-spacing: 1px
 
 .loan-info
   padding-right: 80px
