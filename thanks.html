@@ -38,8 +38,22 @@
     <meta name="twitter:description" content="Compare rates for personal loans online quickly and easily. Use a personal loan to consolidate high interest debt, pay for large purchases and more." />
     <meta property="og:image" content="https://loanadvisor.com/images/loanadvisor-share.jpg" />
     <meta name="twitter:image" content="https://loanadvisor.com/images/loanadvisor-share.jpg" />
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({‘gtm.start’:
+    new Date().getTime(),event:‘gtm.js’});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src=
+    ’https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,‘script’,‘dataLayer’,‘GTM-KM2BNHK’);</script>
+
   </head>
   <body id="thanks">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src=“https://www.googletagmanager.com/ns.html?id=GTM-KM2BNHK”
+    height=“0" width=“0” style=“display:none;visibility:hidden”></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <div class="container main theme-showcase" role="main">
       <div class="form-nav header">
         <div class="row-inset">
@@ -158,25 +172,143 @@
                 }
             }
         }
+        
+        
+        console.log(payload);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        var url = 'http://guidetolenders.quinstage.com/plpost.jsp';
+        
+//        if (window.XMLHttpRequest) {
+//            var http = new XMLHttpRequest();
+//        } else {
+//            // code for old IE browsers
+//            var http = new ActiveXObject("Microsoft.XMLHTTP");
+//        }
+//        http.onreadystatechange = function () {
+//            var DONE = 4; // readyState 4 means the request is done.
+//            var OK = 200; // status 200 is a successful return.
+//            if (http.readyState === DONE) {
+//              if (http.status === OK) 
+//                console.log(http.responseText); // 'This is the returned text.'
+//              } else {
+//                console.log('Error: ' + http.status); // An error occurred during the request.
+//                console.log(http);
+//              }
+//        };
+//
+//console.log(1);
 
-        // if button has been clicked to submit SSN, we will post to quinstreet
-        var button = document.getElementById('ssn-submit');
-        button.onclick = function() {
-          // push ssn field into the payload
-          payload.SSN = document.getElementById('ssn').value
-          var http = new XMLHttpRequest();
-          // staging URL 
-          var url = 'http://guidetolenders.quinstage.com/plpost.jsp';
-          // prod URL
-          // var url = 'https://securegtl.quinstreet.com/plpost.jsp';
 
-          http.open('POST', url);
-          http.setRequestHeader('Content-type', 'application/json');
-          http.setRequestHeader('True-Client-IP', '72.186.114.229')
-          // this probably needs to be changed
-          http.setRequestHeader('Authorization', "Basic ZHJlZGR5:QnJzbm5yczY4Iw== Token MjAzMDY2MTA=")
-          http.send(JSON.stringify(payload))
-        }
+//        // if button has been clicked to submit SSN, we will post to quinstreet
+//        var button = document.getElementById('ssn-submit');
+//        button.onclick = function() {
+//          // push ssn field into the payload
+//          payload.SSN = document.getElementById('ssn').value;
+//          // staging URL 
+//          // prod URL
+//          // var url = 'https://securegtl.quinstreet.com/plpost.jsp';
+//
+//          http.open('POST', url);
+//          http.setRequestHeader('Content-type', 'application/json');
+////          http.setRequestHeader('True-Client-IP', '72.186.114.229');
+////          // this probably needs to be changed
+////          http.setRequestHeader('Authorization', "Basic ZHJlZGR5:QnJzbm5yczY4Iw== Token MjAzMDY2MTA=")
+//          
+//          http.send(JSON.stringify(payload));
+//          
+//        }
+        
+        
+        
+//        fakeSubmit = function()
+//        {
+//          http.open('POST', url, true);
+//          http.setRequestHeader('Content-Type', 'application/json');
+//          http.setRequestHeader('True-Client-IP', '72.186.114.229');
+//          //http.setRequestHeader('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0');
+//          //http.setRequestHeader('Access-Control-Allow-Origin', 'https://loanadvisor.com');
+//          http.setRequestHeader('Authorization', 'BasicZHJlZGR5:QnJzbm5yczY4Iw==TokenMjAzMDY2MTA=');
+//          http.send('{"LoanPurpose":"Emergency","CashOut":"20000","Income":"100000","CreditRating":"Excellent","EmploymentStatus":"7","MonthlyPayment":"100","EducationLevel":"None","Dob":"04/01/1975","Email":"testing@thedmsgrp.com","Fname":"greg","Lname":"scott","HomePhone":"7272870440","PostalCode":"33762","Street":"28100 US Highway 19","City":"CLEARWATER","State":"FL","OwnHome":"Homeowner","TimeAtResidence":"More 3 years","PhoneConsentLang":"I agree to you lending policy","SSN":"999999990","AFN":"dreddy","AF":"20306610","getTYLink":"yes"}');
+//        };
+        
+//        var request = $.ajax({
+//            url: 'http://guidetolenders.quinstage.com/plpost.jsp',
+//            method: "POST",
+//            dataType: 'json',
+//            crossDomain: true,
+//            contentType: 'text/plain',
+////            id: '98fce59c-ff88-65bf-a310-581ee6992128',
+////            name: "TYPageRequest",
+////            dataMode:"raw",
+////            descriptionFormat: "html",
+//            headers: {
+//                'True-Client-IP': '72.186.114.229',
+//                'Authorization': 'Basic ZHJlZGR5:QnJzbm5yczY4Iw== Token MjAzMDY2MTA='
+//            },
+//            data: '{"LoanPurpose":"Emergency","CashOut":"20000","Income":"100000","CreditRating":"Excellent","EmploymentStatus":"7","MonthlyPayment":"100","EducationLevel":"None","Dob":"04/01/1975","Email":"testing@thedmsgrp.com","Fname":"greg","Lname":"scott","HomePhone":"7272870440","PostalCode":"33762","Street":"28100 US Highway 19","City":"CLEARWATER","State":"FL","OwnHome":"Homeowner","TimeAtResidence":"More 3 years","PhoneConsentLang":"I agree to you lending policy","SSN":"999999990","AFN":"dreddy","AF":"20306610","getTYLink":"yes"}',
+//            
+//        });
+//        
+//        request.done(function( msg ) {
+//            console.log('success: ', msg);
+//        });
+// 
+//        request.fail(function( jqXHR, textStatus ) {
+//            console.log('status: ', 
+//                        jqXHR.statusCode().status , 
+//                        textStatus);
+//        });
+        
+        
+        
+//        function createCORSRequest(method, url) {
+//            var xhr = new XMLHttpRequest();
+//            xhr.withCredentials = true;
+//            xhr.onreadystatechange = function () {
+//                console.log(2);
+//                var DONE = 4; // readyState 4 means the request is done.
+//                var OK = 200; // status 200 is a successful return.
+//                if (xhr.readyState === DONE) {
+//                  if (xhr.status === OK) 
+//                    console.log(xhr.responseText); // 'This is the returned text.'
+//                  } else {
+//                    console.log('Error: ' + xhr.status); // An error occurred during the request.
+//                  }
+//            };
+//            if ("withCredentials" in xhr) {
+//                console.log("It is an withCredentials request.");
+//                xhr.open(method, url, true);
+//            } else if (typeof XDomainRequest != "undefined") {
+//                xhr = new XDomainRequest();
+//                xhr.open(method, url);
+//            } else {
+//                xhr = null;
+//            }
+//            xhr.setRequestHeader('Content-Type', 'application/json');
+//            xhr.setRequestHeader('True-Client-IP', '72.186.114.229');
+//            //http.setRequestHeader('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0');
+//            xhr.setRequestHeader('Authorization', 'BasicZHJlZGR5:QnJzbm5yczY4Iw==TokenMjAzMDY2MTA=');
+//            
+//            return xhr;
+//        }
+//        var xhr = createCORSRequest('POST', 'https://securegtl.quinstreet.com/plpost.jsp');
+//        xhr.send();
+//        if (!xhr) {
+//            throw new Error('CORS not supported');
+//        }
+        
+        
+        
     </script>
   </body>
 </html>
